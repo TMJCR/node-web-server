@@ -53,9 +53,16 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'My Portfolio Page',
+        message: 'Welcome to my portfolio page'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
-        error: "Unable to fulfil this request"
+        error: 'Unable to fulfil this request'
     });
 });
 
